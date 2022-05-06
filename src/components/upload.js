@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function MyForm() {
   const [inputs, setInputs] = useState({});
@@ -11,12 +11,12 @@ export default function MyForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
- //   alert(inputs.Name_of_image + " " + inputs.HTML_URL + " " + inputs.tag);
     console.log(inputs)
     fetch('/api/images', {
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json',
+        'action': 'upload'
       },
       body: JSON.stringify(inputs),
     })
