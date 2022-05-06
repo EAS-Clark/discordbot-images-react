@@ -22,10 +22,11 @@ export default function Get() {
                 'action': 'search',
                 'type': value,
                 'input': input,
-            }  
+            }
         })
             .then(response => response.json())
             .then(data => {
+                console.log(data.response);
                 setImages(data.response);
             })
     }
@@ -40,7 +41,7 @@ export default function Get() {
             Serch type
             <select value={value} onChange={handleChange}>
                 <option value="name">Name</option>
-                <option value="tag">Tag</option>
+                <option value="url">url</option>
                 <option value="id">id</option>
             </select>
         </label><p>{<h2>
@@ -48,16 +49,10 @@ export default function Get() {
             <button onClick={handleSubmit}>
                 Search
             </button>
-
-            {images
-                .filter(image => image && image[value].includes(input))
-                .map((image) => <div>
-                    <p>name: {image.Name_of_image}</p>
-                    <p>tag: {image.tag}</p>
-                    <p>id: {image.id}</p>
-                    <img width="200" src={image.HTML_URL} />
-                </div>
-                )}
+            <p>name: {images.Name_of_image}</p>
+            <p>tag: {images.tag}</p>
+            <p>id: {images.id}</p>
+            <img width="200" src={images.HTML_URL} />
         </h2>}</p></>
     )
 
