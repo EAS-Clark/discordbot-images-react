@@ -22,7 +22,7 @@ export default function Get() {
         })
             .then(response => response.json())
             .then(data => {
-                setImages(data);
+                setImages(data.response);
             })
     }, [])
 

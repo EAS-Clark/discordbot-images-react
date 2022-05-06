@@ -22,7 +22,7 @@ export default function MyForm() {
     })
       .then(response => response.json())
       .then(data => {
-        console.log('Success:', data);
+        console.log('Success:', data.response);
       })
   }
 
