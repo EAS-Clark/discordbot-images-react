@@ -3,16 +3,34 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import React from "react";
 import ReactDOM from 'react-dom/client';
-import Upload from './components/upload'
-import Get from './components/get'
-import Search from './components/search'
+
+import Action from './components/action';
+import Remove from './components/delete';
+import Edit from './components/edit';
+import Get from './components/get';
+import Random from './components/random';
+import Search from './components/search';
+import Stats from './components/stats';
+import Tags from './components/tags';
+import Upload from './components/upload';
+
+
+
 
 function App() {
 /*
-  <Upload></Upload>
-  <p></p>
+  <Action></Action>
+  <Remove></Remove>
+  <Edit></Edit>
   <Get></Get>
+  <Random></Random>
   <Search></Search>
+  <Stats></Stats>
+  <Tags></Tags>
+  <Upload></Upload>
+  
+  <p></p>
+
 */
 
   return (
