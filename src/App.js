@@ -39,8 +39,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
-        <Action></Action> 
-        
+        <Remove></Remove>
+
         <a
           className="App-link"
           href="https://reactjs.org"
