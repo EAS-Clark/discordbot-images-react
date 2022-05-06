@@ -28,7 +28,7 @@ function App() {
   <Stats></Stats>
   <Tags></Tags>
   <Upload></Upload>
-  
+
   <p></p>
 
 */
@@ -38,9 +38,9 @@ function App() {
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Upload></Upload>
-      
-        <Get></Get>
+
+        <Action></Action> 
+        
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -54,5 +54,5 @@ function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+//const root = ReactDOM.createRoot(document.getElementById('root'));
 export default App;
