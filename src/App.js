@@ -18,6 +18,20 @@ import Upload from './components/upload';
 
 
 function App() {
+/*
+  <Action></Action>
+  <Remove></Remove>
+  <Edit></Edit>
+  <Get></Get>
+  <Random></Random>
+  <Search></Search>
+  <Stats></Stats>
+  <Tags></Tags>
+  <Upload></Upload>
+
+  <p></p>
+
+*/
 
   return (
     <div className="App">
@@ -25,15 +39,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
-        <Action></Action>
-        <Remove></Remove>
-        <Edit></Edit>
-        <Get></Get>
         <Random></Random>
-        <Search></Search>
-        <Stats></Stats>
-        <Tags></Tags>
-        <Upload></Upload>
 
         <a
           className="App-link"

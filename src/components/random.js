@@ -20,8 +20,12 @@ export default function Get() {
         })
             .then(response => response.json())
             .then(data => {
+                if (data.status_code == 404) {
+                    alert("data: " + data.response);
+                } else {
                 console.log(data.response);
                 setImages(data.response);
+                }
             })
     }
 

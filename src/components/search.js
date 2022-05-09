@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 export default function Get() {
 
     const [images, setImages] = useState([])
-    const [input, setInput] = useState("")
+    const [input, setInput] = useState("Name")
     const [value, setValue] = useState('Name_of_image');
 
     const handleChange = (event) => {
@@ -13,7 +13,6 @@ export default function Get() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(input);
 
         fetch("/api/images", {
             method: 'GET',
@@ -26,9 +25,20 @@ export default function Get() {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data.response);
-                setImages(data.response);
-            })
+                console.log(data)
+                if (data.status_code == 400) {
+                    alert("data: " + data.response);
+                } else {
+                    console.log(data.response);
+                    setImages(data.response);
+                }
+
+
+            }).catch(error => {
+
+                console.log('error: ' +error);
+               
+            });
     }
 
     const handleInoutChange = (e) => {
@@ -49,10 +59,10 @@ export default function Get() {
             <button onClick={handleSubmit}>
                 Search
             </button>
-            <p>name: {images.Name_of_image}</p>
-            <p>tag: {images.tag}</p>
-            <p>id: {images.id}</p>
-            <img width="200" src={images.HTML_URL} />
+            <p>name: {images.Name_of_image || ''}</p>
+            <p>tag: {images.tag || ''}</p>
+            <p>id: {images.id || ''}</p>
+            <img width="200" src={images.HTML_URL || ''} />
         </h2>}</p></>
     )
 
