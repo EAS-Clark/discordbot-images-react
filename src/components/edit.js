@@ -31,7 +31,9 @@ export default function Get() {
         })
             .then(response => response.json())
             .then(data => {
-                setserverResponse(data.response);
+             
+                alert("data: " + data.response);
+            
             })
     }
 

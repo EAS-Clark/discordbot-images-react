@@ -13,7 +13,7 @@ export default function MyForm() {
     event.preventDefault();
     console.log(inputs)
     fetch('/api/images', {
-      method: 'POST', 
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'action': 'upload'
@@ -22,7 +22,12 @@ export default function MyForm() {
     })
       .then(response => response.json())
       .then(data => {
-        console.log('Success:', data.response);
+
+        alert("data: " + data.response);
+
+
+      }).catch(error =>{
+        alert("error: " + error);
       })
   }
 

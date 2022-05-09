@@ -21,7 +21,13 @@ export default function Get() {
         })
             .then(response => response.json())
             .then(data => {
-                setserverResponse(data.response);
+          
+                if (data.status_code == 400) {
+                    alert("data: " + data.response);
+                } else {
+                    setserverResponse(data.response);
+                }
+              
             })
     }
 
