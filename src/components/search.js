@@ -49,7 +49,7 @@ export default function Get() {
     return (
         <><label>
             Serch type
-            <select value={value} onChange={handleChange}>
+            <select value={value} onChange={handleChange} name="textbox">
                 <option value="name">Name</option>
                 <option value="url">url</option>
                 <option value="id">id</option>

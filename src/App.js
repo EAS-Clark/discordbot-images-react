@@ -39,7 +39,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
-        <Remove></Remove>
+        <Search></Search>
 
         <a
           className="App-link"
